@@ -1,0 +1,308 @@
+Week 1
+
+DAY 1
+
+-enum class
+-nullptr
+-default
+-delete
+-six special members
+
+    // 1) Default Constructor (deleted default constructor)
+
+    vehicle() = delete;
+
+    // 2) Copy Constructor (deleted copy constructor)
+
+    vehicle(const vehicle &) = default;
+
+    // 3) Copy assignment operator
+
+    vehicle &operator=(const vehicle &) = delete;
+
+    // 4) Move Constructor
+
+    vehicle(vehicle &&) = delete;
+
+    // 5) Move Assignment
+
+    vehicle &operator=(vehicle &) = delete;
+
+    // 6) Destructor
+    
+- copy assignment
+- copy construction
+
+DAY 2
+
+YT channels 
+mike shah -> c programmimg
+cppcon -> back to playlist -> do till jan end
+distrotube -> the command line playlist -> do within 10 days
+LearnLinuxTv
+
+websites:-
+cppreference.com
+thisptr.com
+nextptr.com
+
+dont's
+
+shortcuts
+
+ctrl+b // 
+ctrl+p //open file
+ctrl+w //close current file
+ctrl+k+w//close all files
+ctrl+enter//split screen
+cltr+1//move in split screen
+
+Memory management 
+sudo apt-get install valgrind
+compile file
+valgrind --leak-check=yes ./a.out
+
+objdump -Cd app // to check assembly code of your program
+
+/*
+RAII: Resource Acquisition Is Initialization
+1) When is acquired resource, something is initizalized 
+
+2) if I want to acquire resource then I must acquire it 
+while initializing "something"
+
+*/
+
+
+DAY 3
+/*
+Has A relationship-> one to one , one to many
+association-> types 1) basic association 2) composition 3) aggregation
+
+
+Is A relationship->
+Inheritance-> done for generalization specialization
+1)single
+2)multiple(don't use)
+3)Multilevel
+4)Hybrid
+5)Hierarchical
+
+*/
+/*
+uniform initialization syntax
+
+
+*/
+DAY 4
+uniform initialization
+move symentrics
+
+// references 
+L value 
+
+Rules
+c and cpp are not connected
+L value and R value have been revised
+pointer sementics are discouraged
+
+
+DAY 5
+
+
+call by reference 
+call by value
+
+DAY 6
+
+DAY 7
+
+//keywords
+// default
+// delete
+// override
+// final
+// nullptr
+// noexcept
+// auto
+
+// concept
+
+// enum class
+// rvalue_references // move semantics
+// uniform initialization
+// Member-list initialization
+// COnstructor deligation
+// smart pointers -> stared_ptr 
+// for each loop
+DAY 8
+
+structured programming
+    -c programming
+    -inperative coding
+
+object oriented programming
+    -represent state based on a model
+    -extend, associate, compose, aggregate, generalize and abstruct behaviour and types
+    -it is suitable scale projects
+
+
+    lambda
+
+    map
+
+    filter
+
+    reduce
+
+    closure
+
+    Type Erasure
+
+    wrapper
+
+    partial function
+
+    value semantics
+
+    //////////
+
+    monoid
+
+    monad
+
+1) every object has a type
+    functions should also have a type(signature of a function is its type)
+
+2) pass objects to functios as parameters
+    functions can be passed via wrapper or a function pointer to other fucntion
+
+3) return objects from functions
+    functions can be returned via wrapper or fucntion pointer from other functions
+
+4) we can obtain address of objects
+    we can obtain address of any function
+
+5) objects can be stored in containers
+    function can also be stored in containers via wrapper or function pointer
+DAY 9
+
+/* 
+
+1) referance physically don't exist!
+    - they have no storage
+    - they won't have their own address
+
+2) referances cannot be put in a container
+
+3) Referance of a referance does not work as intended
+
+*/
+
+
+// represent state by creating object
+//Lambdas are callables like regular function (top-level functions/global functions)
+//Lambdas have no name i.e they are anonymous functions 
+
+/* 
+
+WHY?
+    They help us to pass, receive, store and utilize logic in the 
+    form of an object with proper type system support
+
+    They can be used for specifying a short term, one time or scope based
+    logical process to be performed on some data
+
+    CPP lamda have a concept of capture clause which allows them act like closures
+
+    [n1] : capture n1 only by value
+    [=]  : capture and use all variables from surrounding function by value
+
+    [&n1] : capture reference by lvalue reference
+    [&] :capture all variables from surrounding function by referance 
+*/
+
+/* 
+lambda can be a
+1) Predicate -> bool return lambdas are predicate
+2) Binary operation -> takes 2 operands & perform binary operation
+3) Comparator -> takes 2 operand and returns bool
+ */
+DAY 10
+DAY 11
+
+editor & IDE
+e.g VsCode
+e.g NeoVim
+
+version control
+e.g Git
+e.g Mercurial
+e.g SVN
+
+Terminal
+e.g Gnome-Terminal
+e.g Alakritty
+e.g Konsole
+
+Shell :
+e.g : Bash
+e.g : Fish
+e.g : Zsh
+
+Bonus: Shell customize
+
+If API has to be tested
+
+API Client
+e.g POSTMAN
+e.g Thunder Client (VsCode extention)
+e.g Curl (GUN utility)
+
+Unit Testing:
+
+e.g CxxTestGen Framework
+
+System Level Package Manager
+e.g apt
+e.g dnf
+e.g winget
+
+Framework level package Manager
+
+e.g : pip, ng, conda, etc
+
+DAY 12
+
+week 3
+1) Concurrency : Ability to do context-switching between running
+                tasks to archive better performance (concurrent execute)
+2) parallelism : Doing more than one action AT THE SAME MOVEMENT IN TIME BASED
+                HARDWARE AVAILABILITY
+3) Learn about lock-based synchronization primitives
+    1) MUTEX
+    2) SEMAPHORE
+    3) RECURSSIVE LOCKING
+    4) CONDITIONAL LOCKING
+    5) SCOPE_BASED LOCKING (BASED ON RAII PRINCIPLE)
+
+4) Algebric data types in Modern c++
+    -Optional
+    -Variant (functional polymorphism)
+    -any
+
+5) Learn some behind-the-scenes optimization techniques
+    -guranteed copy elision
+    -constexpr
+
+6) if & switch initializers
+
+7) structured binding
+
+
+Regarding systems
+1) Memory (Primary memory or RAM)
+2) Processing hardware unit(intel ya AMD)
+
+
+
